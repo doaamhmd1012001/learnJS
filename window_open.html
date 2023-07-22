@@ -1,9 +1,76 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Open window example </title>
+        <title>
+            Open window
+        </title>
     </head>
-    <body>
-        <input type="button" value="Open new window" onclick="Openwin();"/> 
-    </body>
+    <body onload="i = setInterval(showclock,1000)">
+      
+      
+        <button id="dodo"> Dodo </button> <br>
+        <button id="dsds"> dddd </button> <br>
+
+        <div id="clock" style="text-align: center;">
+
+        </div>
+        <br>
+        <button id="ddd" onclick="alert(event.target.id)"> test </button> <br>
+        <input type="text" onkeydown="preventspace(event)" > <br>
+
+        
+        <div onmousedown="hidediv(event)" id="msg" style="width: 100px; Height: 100px; border: solid 3px red;">
+
+        </div>
+
+<script>
+   
+document.getElementById("dodo").onclick=dddd;    
+document.getElementById("dsds").addEventListener("click",dfdf);  
+
+function dfdf(){  
+    alert("win add !");
+}
+    function dddd(){  
+        alert("win!");
+    }
+    function hidediv(ev){
+
+        if( ev.button == 0 && ev.altKey == true){
+            alert("win!");
+        }
+
+    }
+    
+    function preventspace(ev){
+        if (ev.key == " ")
+        {
+            ev.preventDefault();
+        }
+    }
+   /* var win1;
+    var scrolleintrval;
+    function OpenWin(){
+        // window.open (url , name , properties);
+        win1 = window.open('','_blank','width=200,hieght=200,screenx=333,screeny=111');
+        win1.document.write("This is new window?");
+    }
+    function scrollepage(){
+        window.scrollBy(0,50);
+    }
+    function startscrolle (){
+        scrolleintrval = window.setInterval(scrollepage,1000);
+    }
+    function stopscrolle (){
+        window.clearInterval(scrolleintrval);
+    }
+*/
+function showclock(){
+    var i;
+    var currentdate = new Date();
+    document.getElementById("clock").innerHTML=currentdate.toLocaleTimeString().bold();
+
+}
+</script>
+    </body> 
 </html>
